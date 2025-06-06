@@ -37,124 +37,124 @@ HAVING condition;
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/4adae88e-72ef-4d38-9f84-4092daf08d12)
 
-```sql
--- Paste your SQL code below for Question 1
+```
+SELECT Medication, count(*) as TotalPrescriptions from Prescriptions GROUP BY Medication;
 ```
 
 **Output:**
-
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/0e6274f5-7f6d-4bf1-824a-c2d61057ed21)
 
 **Question 2**
----
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/1cd5aa5a-cb0d-4560-81b3-3894b8695c9e)
 
-```sql
--- Paste your SQL code below for Question 2
+```
+select Gender, count(*) as TotalPatients from Patients group by Gender;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/9fc1eeca-5ce7-4442-8164-928d9e1b1bde)
+
 
 **Question 3**
----
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/a124e803-c672-4a32-99ea-e8afeffd49f1)
 
-```sql
--- Paste your SQL code below for Question 3
+```
+select date(AppointmentDateTime) as AppointmentDate,
+count(*) as TotalAppointments from  Appointments group by date(AppointmentDateTime) order by AppointmentDate;
 ```
 
-**Output:**
 
-![Output3](output.png)
+**Output:**
+![image](https://github.com/user-attachments/assets/f5dc56b4-0a02-491e-8a63-4ef009a496fa)
 
 **Question 4**
----
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/92d084b2-9901-473d-92b6-ac194de62641)
 
-```sql
--- Paste your SQL code below for Question 4
 ```
+select count(*) as COUNT from customer where city = 'Noida';
+```
+
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/3d6556d3-98a3-4c96-98ab-bdf70cd599cf)
+
 
 **Question 5**
----
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/936524f5-aa2c-4bed-9ecd-8c4bbda46b0d)
 
-```sql
--- Paste your SQL code below for Question 5
 ```
+select COUNT(*) as COUNT from customer where grade is not null;
+```
+
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/f8630c8c-290a-4158-9099-9dc52f59adde)
+
 
 **Question 6**
----
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/6b1466c4-2d04-4f9c-ac1d-29fb2732a0b0)
 
-```sql
--- Paste your SQL code below for Question 6
+```
+select SUM(income) as "total_income" from employee where age >= 40;
 ```
 
-**Output:**
 
-![Output6](output.png)
+**Output:**
+![image](https://github.com/user-attachments/assets/5fb022e5-fae1-443d-a49e-f02e48965f64)
 
 **Question 7**
----
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/7ea40077-2115-4d35-88ee-73e26137ac80)
 
-```sql
--- Paste your SQL code below for Question 7
 ```
+select address,SUM(salary) from customer1 group by address having sum(salary) > 2000;
+```
+
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/1f37027f-5c69-4178-9b11-41c55af3a8b5)
+
 
 **Question 8**
----
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/ec096f99-ee9e-4c66-b0aa-44f5f406617a)
 
-```sql
--- Paste your SQL code below for Question 8
+```
+select city, SUM(income) as Income from employee group by city having SUM(income) > 200000;
 ```
 
-**Output:**
 
-![Output8](output.png)
+**Output:**
+![image](https://github.com/user-attachments/assets/8f4b6b76-d033-4763-bc5e-e076453e2227)
+
 
 **Question 9**
----
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/3046cf74-9d0b-44d3-a9d3-a469db7890e6)
 
-```sql
--- Paste your SQL code below for Question 9
+```
+select jdate, MAX(workhour) from employee1 group by jdate having MAX(workhour) > 12;
 ```
 
-**Output:**
 
-![Output9](output.png)
+**Output:**
+![image](https://github.com/user-attachments/assets/973db15a-1355-44d8-8519-ea90d37e6425)
 
 **Question 10**
----
--- Paste Question 10 here
 
-```sql
--- Paste your SQL code below for Question 10
+![image](https://github.com/user-attachments/assets/fc719711-05d2-41b7-a8a8-8d21b6056f76)
+
+```
+select DoctorID,count(*) as TotalPrescriptions from Prescriptions group by DoctorID
 ```
 
-**Output:**
 
-![Output10](output.png)
+**Output:**
+![image](https://github.com/user-attachments/assets/29007258-4aa3-4447-8a4c-5d6de05b21f3)
+
 
 
 ## RESULT
