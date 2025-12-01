@@ -48,25 +48,44 @@ Design a database for patient management, appointments, medical records, and bil
 # ER Diagram Submission - Student Name
 
 ## Scenario Chosen:
-University / Hospital (choose one)
+University 
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
+
+<img width="835" height="718" alt="image" src="https://github.com/user-attachments/assets/2162d63d-932a-4631-bd6b-cc9c78139482" />
+
 
 ## Entities and Attributes:
-- Entity1: Attributes
-- Entity2: Attributes
-...
+
+Student-(Register No, Name, dob, EmailId, Mobile No)
+
+Department -(department name, hod)
+
+Course-(course name, course no, no. of credits)
+
+Faculty- (Staff Id, mobile no, name, email)
+
+Prerequisite Courses- (course name, credits)
+
+
 
 ## Relationships and Constraints:
-- Relationship1 (Cardinality, Participation)
-- Relationship2 (Cardinality, Participation)
-...
+
+Belongs to (Student, Department)
+Enrolls in (Student, Course)
+Offers (Department, Course)
+Handled by (Course, Faculty)
+Has prerequisites (Course, Prerequisite Courses)
+Belongs to (Faculty, Department)
 
 ## Extension (Prerequisite / Billing):
-- Explain how you modeled prerequisites or billing.
+
+The ER diagram models prerequisites using the has prerequisites relationship connecting Course to the Prerequisite Courses entity. This separate entity stores details like course name and credits for each prerequisite. This design allows a course to have multiple prerequisites, each with specific attributes, avoiding multi-valued attributes in the Course entity. The implied Many-to-Many relationship signifies that one course can have several prerequisites, and a course can be a prerequisite for many others. This approach ensures a flexible and normalized representation of prerequisite dependencies within the database.
 
 ## Design Choices:
-Brief explanation of why you chose certain entities, relationships, and assumptions
+
+The entities in this ER diagram—Student, Department, Course, and Faculty—were chosen as they represent the core organizational units and actors within a typical academic institution. Students are the primary subjects of study, Departments are the administrative and academic groupings. Courses are the units of instruction, and Faculty are the educators and researchers. The relationships model the natural interactions between these entities: students belong to departments and enroll in courses; departments offer courses and faculty belong to and handle them; and courses have prerequisites. The inclusion of "Prerequisite Courses" as a separate entity, linked by the "has prerequisites" relationship, addresses the need to capture potentially multiple and attribute-rich prerequisite information for each course without complicating the main "Course" entity. Key assumptions include that every student and faculty member is associated with one department (total participation), and that the curriculum is structured around courses offered by departments and potentially requiring other courses as prerequisites. The Many-to-Many cardinalities for "enrolls in" and "handled by" reflect the reality that students take multiple courses and faculty teach multiple courses.
 
 ## RESULT
+
+Thus the ER diagram for the university database is successfully developed.
